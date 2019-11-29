@@ -1,20 +1,21 @@
 <?php
 include("Create/conexion.php");
-$registros=$conexion_db->query("SELECT * FROM datos_usuarios")->fetchAll(PDO::FETCH_OBJ);
+$registros=$conexion_db->query("SELECT * FROM usuarios")->fetchAll(PDO::FETCH_OBJ);
 if(isset($_POST["insert"])){
-  $email = $_POST["email"];
+  
   $nombres=$_POST["nombres"];
   $apellidos=$_POST["apellidos"];
-  $institucion=$_POST["institucion"];  
-  $departa=$_POST["depart"];
-  $ciudad=$_POST["ciudad"];
-  $paiss=$_POST["pais"];
-  $cargoo=$_POST["cargo"];
+  $noIdentificacion=$_POST["identificacion"];
+  $direccion = $_POST["direccion"];
+  $email = $_POST["emails"];
+  $titulacion=$_POST["titulacion"];  
+  $fec_titulacion=$_POST["fec_titulacion"];
+  $notas=$_POST["nota_final"];
 
-  $SQL="INSERT INTO USUARIOS_PLATAFORMA (EMAIL,FIRSTNAME, LASTNAME, INSTITUTION, DEPARTMENT, CITY, COUNTRY, PROFILE_FIELD_CARGO) VALUES (:ema,:fname, :lname, :inst, :depa, :cit, :cont, :charge)";
+  $SQL="INSERT INTO usuarios (nombres,apellidos, no_identificacion, direccion, email, titulacion, fecha_titulo, nota_final) VALUES (:nom,:ape, :noId, :dir, :ema, :titu, :fec_tit, :nota)";
   $Resultado=$conexion_db->prepare($SQL);
-  $Resultado->execute(array(":ema"=>$email,":fname"=>$nombres,":lname"=>$apellidos,":inst"=>$institucion, ":depa"=>$departa, ":cit"=>$ciudad,":cont"=>$paiss, ":charge"=>$cargoo));
-  header("Location: index.php");
+  $Resultado->execute(array(":nom"=>$nombres,":ape"=>$apellidos,":noId"=>$noIdentificacion,":dir"=>$direccion, ":ema"=>$email, ":titu"=>$titulacion,":fec_tit"=>$fec_titulacion, ":nota"=>$notas));
+  header("Location: usuarios_Mockup.php");
 
   
 }

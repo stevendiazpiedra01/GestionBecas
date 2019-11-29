@@ -15,6 +15,9 @@
 
     <title>Document</title>
 </head>
+<?php
+require("create/insert.php");
+?>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Gestion de Becas</a>
@@ -53,23 +56,26 @@
 </nav>
 
 <div class="container">
-    <form (submit)="addStudent(nom, ape, email, edad, tel, dir)">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="nombres">Nombres</label>
-                <input type="text" #nom class="form-control" id="nombres" placeholder="Nombres" required>
+                <input type="text" #nom class="form-control" id="nombres" name="nombres" placeholder="Nombres" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="apellidos">Apellidos</label>
-                <input type="text" #ape class="form-control" id="apellidos" placeholder="Apellidos" required>
+                <input type="text" #ape class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" required>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="apellidos">No. identificacion</label>
-                <input type="text" #ape class="form-control" id="apellidos" placeholder="No. Identificacion" required>
+                <label for="identificacion">No. identificacion</label>
+                <input type="text" #ape class="form-control" id="identificacion" 
+                name="identificacion"
+                placeholder="No. Identificacion" required>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="apellidos">Direccion</label>
-                <input type="text" #ape class="form-control" id="apellidos" placeholder="Direccion" required>
+                <label for="direccion">Direccion</label>
+                <input type="text" #ape class="form-control" id="direccion"
+                name="direccion" placeholder="Direccion" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="emails">Email</label>
@@ -77,23 +83,27 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend2">@</span>
                     </div>
-                    <input type="email" #email class="form-control" id="emails" placeholder="Email" aria-describedby="inputGroupPrepend2" required>
+                    <input type="email" #email class="form-control" id="emails"
+                    name="emails" placeholder="Email" aria-describedby="inputGroupPrepend2" required>
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="apellidos">Titulacion</label>
-                <input type="text" #ape class="form-control" id="apellidos" placeholder="Titulacion" required>
+                <label for="titulacion">Titulacion</label>
+                <input type="text" #ape class="form-control"
+                id="titulacion" name="titulacion" placeholder="Titulacion" required>
             </div>
         </div>
         <div class="form-row">
         
             <div class="col-md-4 mb-3">
-                <label for="edad">Fecha de Titulacion</label>
-                <input type="date" #edad class="form-control" id="edad" placeholder="Fecha de Titulacion" required>
+                <label for="fec_titulacion">Fecha de Titulacion</label>
+                <input type="date" #edad class="form-control" id="fec_titulacion"
+                name="fec_titulacion" placeholder="Fecha de Titulacion" required>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="tel">Nota Final</label>
-                <input type="text" #tel class="form-control" id="tel" placeholder="Nota Final" required>
+                <label for="nota_final">Nota Final</label>
+                <input type="text" #tel class="form-control" id="nota_final"
+                name="nota_final" placeholder="Nota Final" required>
             </div>
             
         </div>
@@ -107,7 +117,7 @@
         </div>
         <input id="archivos" name="imagenes[]" type="file" multiple=true class="file-loading">
        <br> 
-        <button class="btn btn-primary">Agregar Registro</button>
+       <input class="btn btn-primary" type='submit' name='insert' id='insert' value='Insertar'>
     </form>
 <br>
 
