@@ -64,6 +64,14 @@
                 <input type="text" #ape class="form-control" id="apellidos" placeholder="Apellidos" required>
             </div>
             <div class="col-md-4 mb-3">
+                <label for="apellidos">No. identificacion</label>
+                <input type="text" #ape class="form-control" id="apellidos" placeholder="No. Identificacion" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="apellidos">Direccion</label>
+                <input type="text" #ape class="form-control" id="apellidos" placeholder="Direccion" required>
+            </div>
+            <div class="col-md-4 mb-3">
                 <label for="emails">Email</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -74,18 +82,19 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="col-md-3 mb-3">
-                <label for="edad">Edad</label>
-                <input type="text" #edad class="form-control" id="edad" placeholder="Edad" required>
+        <div class="col-md-4 mb-3">
+                <label for="apellidos">Titulacion</label>
+                <input type="text" #ape class="form-control" id="apellidos" placeholder="Titulacion" required>
             </div>
             <div class="col-md-3 mb-3">
-                <label for="tel">Telefono</label>
-                <input type="text" #tel class="form-control" id="tel" placeholder="Telefono" required>
+                <label for="edad">Fecha de Titulacion</label>
+                <input type="date" #edad class="form-control" id="edad" placeholder="Fecha de Titulacion" required>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="dir">Direccion</label>
-                <input type="text" #dir class="form-control" id="dir" placeholder="Direccion" required>
+            <div class="col-md-3 mb-3">
+                <label for="tel">Nota Final</label>
+                <input type="text" #tel class="form-control" id="tel" placeholder="Nota Final" required>
             </div>
+            
         </div>
         <div class="form-group">
             <div class="form-check">
@@ -95,11 +104,13 @@
             </label>
             </div>
         </div>
+        <input id="archivos" name="imagenes[]" type="file" multiple=true class="file-loading">
+       <br> 
         <button class="btn btn-primary">Agregar Registro</button>
     </form>
 <br>
-<input id="archivos" name="imagenes[]" type="file" multiple=true class="file-loading">
-	</body>
+
+	
 	<?php 	
 	$directory = "img/";      
 	$images = glob($directory . "*.*");
