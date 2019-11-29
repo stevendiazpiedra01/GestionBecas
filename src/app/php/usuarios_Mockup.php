@@ -80,17 +80,18 @@
                     <input type="email" #email class="form-control" id="emails" placeholder="Email" aria-describedby="inputGroupPrepend2" required>
                 </div>
             </div>
-        </div>
-        <div class="form-row">
-        <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="apellidos">Titulacion</label>
                 <input type="text" #ape class="form-control" id="apellidos" placeholder="Titulacion" required>
             </div>
-            <div class="col-md-3 mb-3">
+        </div>
+        <div class="form-row">
+        
+            <div class="col-md-4 mb-3">
                 <label for="edad">Fecha de Titulacion</label>
                 <input type="date" #edad class="form-control" id="edad" placeholder="Fecha de Titulacion" required>
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="tel">Nota Final</label>
                 <input type="text" #tel class="form-control" id="tel" placeholder="Nota Final" required>
             </div>
@@ -144,7 +145,7 @@
         <div class="container py-2">
 
             <p class="text-white my-2">
-               Brayan Diaz
+               Ingenieria de Sistemas
             </p>
         </div>
     </footer>
