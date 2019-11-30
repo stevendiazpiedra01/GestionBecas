@@ -28,6 +28,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="php/usuarios_Mockup.php">Registro de becas</a>
                 </li>
+         <li class="nav-item active">
+        <a class="nav-link" href="php/Pagina_Ministerio.php"> Pagina Ministerio<span class="sr-only">(current)</span></a>
+      </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="php/Html/index.html">Login</a>
                 </li>
