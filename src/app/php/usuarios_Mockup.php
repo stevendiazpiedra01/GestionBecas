@@ -35,8 +35,8 @@ require("create/insert.php");
             
         }
     ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Gestion de Becas</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.php">Gestion de Becas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,20 +50,23 @@ require("create/insert.php");
                 <li class="nav-item">
                     <a class="nav-link" href="#">Registro de becas</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Html/index.html">Login</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Becas
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Becas FPI</a>
+                        <a class="dropdown-item" href="#">Becas FPI</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Proponer Proyecto</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">Registrar Ministerio</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" >
@@ -72,7 +75,7 @@ require("create/insert.php");
             </form>
         </div>
     </nav>
-
+<br>
     <div class="container">
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
             <div class="form-row">
