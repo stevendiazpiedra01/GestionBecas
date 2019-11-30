@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-   
+
 
     <title>Becas Fpu</title>
 </head>
@@ -57,11 +57,53 @@
         </div>
     </nav>
 
+    <form class="text-center border border-light p-5" action="#!">
+
+        <p class="h4 mb-4">Agregar Beca FPU</p>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <input type="text" id="nomBeca" name="nomBeca" class="form-control" placeholder="Nombre Beca">
+            </div>
+            <div class="col">
+                <select class="form-control">
+                    <option>Cupos Disponibles ?</option>
+                    <option>3</option>
+                    <option>7</option>
+                    <option>15</option>
+                    <option>20</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row mb-5">
+            <div class="col">
+                <input type="text" id="nomBeca" name="nomBeca" class="form-control"
+                    placeholder="Area/Facultad De la Beca">
+            </div>
+        </div>
+
+        <div class="form-row mb-5">
+        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                Por Ejemplo (Matematicas, Quimica, Informatica, Electronica ...)
+            </small>
+            
+        </div>
+            
+
+            <!-- Sign up button -->
+            <button class="btn btn-info my-4 btn-block" type="submit">Agregar Becas FPU</button>
+
+
+
+
+    </form>
+
+
     <footer class="footer bg-dark rounded-top text-center">
         <div class="container py-2">
 
             <p class="text-white my-2">
-               Ingenieria De Software
+                Ingenieria De Software
             </p>
         </div>
     </footer>
